@@ -1,0 +1,126 @@
+/* ============================
+   GENERAL STYLES
+============================ */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f9fc;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #2e86de;
+  color: white;
+  padding: 1.2rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  background: #fff;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* ============================
+   1️⃣ ATTRIBUTE SELECTORS
+============================ */
+
+/* [type="text"] targets any input with type="text" */
+input[type="text"] {
+  border: 2px solid #27ae60;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Highlight secure (https) links */
+a[href^="https"] {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Highlight non-secure (http) links */
+a[href^="http:"] {
+  color: #c0392b;
+}
+
+/* ============================
+   2️⃣ PSEUDO-CLASSES
+============================ */
+
+/* :hover — when hovering over link */
+a:hover {
+  text-decoration: underline;
+  color: #1abc9c;
+}
+
+/* :focus — when input is active */
+input:focus {
+  outline: 3px solid #2980b9;
+  background-color: #ecf0f1;
+}
+
+/* :nth-child() — style every even item differently */
+.demo-list li:nth-child(even) {
+  background-color: #dfe6e9;
+}
+
+/* :nth-child(odd) — alternate color */
+.demo-list li:nth-child(odd) {
+  background-color: #b2bec3;
+}
+
+/* :hover on list item */
+.demo-list li:hover {
+  background-color: #74b9ff;
+  color: white;
+  cursor: pointer;
+}
+
+/* ============================
+   3️⃣ PSEUDO-ELEMENTS
+============================ */
+
+/* ::before and ::after add virtual elements */
+.demo-list li::before {
+  content: "🍎 ";
+}
+
+.demo-list li::after {
+  content: " ✅";
+  color: green;
+}
+
+/* ============================
+   4️⃣ COMBINATORS
+============================ */
+
+/* Descendant selector: selects all <p> inside .parent (any level deep) */
+.parent p {
+  color: #2c3e50;
+}
+
+/* Child selector (>): only direct children of .parent */
+.parent > p {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Adjacent sibling (+): targets the paragraph immediately following a div */
+div + p {
+  color: #c0392b;
+  font-style: italic;
+}
+
+/* General sibling (~): any <p> after the first <p> inside .parent */
+.parent p ~ p {
+  border-top: 1px dashed #aaa;
+  margin-top: 8px;
+  padding-top: 5px;
+}

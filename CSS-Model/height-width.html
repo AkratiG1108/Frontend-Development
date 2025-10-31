@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Height and Width Practice Layout</title>
+  <link rel="stylesheet" href="height-width.css">
+</head>
+<body>
+  <header>
+    <h1>Height and Width Practice Layout</h1>
+    <p>Demonstrating various height, width, min/max, and overflow properties.</p>
+  </header>
+
+  <main>
+    <section class="layout-container">
+      <!-- Box with fixed pixel dimensions -->
+      <div class="box box1">
+        <h2>Box 1</h2>
+        <p>Width: 200px<br>Height: 150px</p>
+      </div>
+
+      <!-- Box using percentage & min/max width -->
+      <div class="box box2">
+        <h2>Box 2</h2>
+        <p>Width: 40% (min: 250px, max: 400px)<br>Height: 25vh</p>
+      </div>
+
+      <!-- Box using em and overflow -->
+      <div class="box box3">
+        <h2>Box 3</h2>
+        <p>This box has a fixed height in em units. It demonstrates <strong>overflow: auto</strong> — scroll to see the content overflowing below.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Akkrati Gupta | Height & Width Practice</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* ============================
+   GENERAL PAGE STYLES
+============================ */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2d3436;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}
+
+header, footer {
+  background-color: #2e86de;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ============================
+   ARTICLE TEXT STYLING
+============================ */
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  color: #1e3799;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  font-size: 1.05rem;
+}
+
+/* Custom styling for semantic tags */
+mark {
+  background-color: #ffeaa7;
+  color: #2d3436;
+  padding: 0 4px;
+}
+
+strong {
+  color: #0984e3;
+  font-weight: 700;
+}
+
+em {
+  color: #d63031;
+  font-style: italic;
+}
+
+/* ============================
+   PSEUDO-ELEMENTS
+============================ */
+
+/* ::first-letter adds drop-cap style */
+article p::first-letter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #6c5ce7;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+}
+
+/* ::first-line highlights the first line of each paragraph */
+article p::first-line {
+  color: #0984e3;
+  font-weight: 600;
+}
+
+/* ============================
+   RESPONSIVENESS
+============================ */
+@media (max-width: 700px) {
+  main {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}

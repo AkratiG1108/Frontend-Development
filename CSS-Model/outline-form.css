@@ -1,0 +1,100 @@
+/* ============================
+   GENERAL PAGE STYLES
+============================ */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #2d3436;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: #2e86de;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ============================
+   FORM STYLING
+============================ */
+.styled-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: #1e3799;
+}
+
+input, textarea {
+  font-family: inherit;
+  padding: 0.8rem;
+  border: 2px solid #dcdde1;
+  border-radius: 8px;
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+/* ============================
+   OUTLINE & FOCUS STYLES
+============================ */
+
+/* Default subtle outline */
+input:hover, textarea:hover {
+  outline: 2px dashed #74b9ff;
+}
+
+/* On focus - color change and offset */
+input:focus, textarea:focus {
+  outline: 3px solid #0984e3;
+  outline-offset: 6px;
+  border-color: #0984e3;
+  box-shadow: 0 0 10px rgba(9,132,227,0.3);
+}
+
+/* ============================
+   BUTTON STYLING
+============================ */
+button {
+  background-color: #2e86de;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e3799;
+}
+
+/* ============================
+   RESPONSIVENESS
+============================ */
+@media (max-width: 600px) {
+  .styled-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}

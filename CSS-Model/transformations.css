@@ -1,0 +1,90 @@
+/* ============================
+   GENERAL PAGE STYLES
+============================ */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f6f7;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #2e86de;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+main.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+/* ============================
+   BOX BASE STYLE
+============================ */
+.box {
+  text-align: center;
+}
+
+.shape {
+  width: 120px;
+  height: 120px;
+  background-color: #74b9ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease; /* Smooth transition for hover effects */
+}
+
+/* Label styling */
+figcaption {
+  margin-top: 0.8rem;
+  font-weight: 500;
+}
+
+/* ============================
+   TRANSFORM EFFECTS ON HOVER
+============================ */
+
+/* Rotate transformation */
+.rotate .shape:hover {
+  transform: rotate(20deg);
+  background-color: #0984e3;
+}
+
+/* Scale transformation */
+.scale .shape:hover {
+  transform: scale(1.2);
+  background-color: #00cec9;
+}
+
+/* Translate transformation */
+.translate .shape:hover {
+  transform: translate(20px, -10px);
+  background-color: #6c5ce7;
+}
+
+/* Skew transformation */
+.skew .shape:hover {
+  transform: skew(10deg, 5deg);
+  background-color: #fd79a8;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media (max-width: 700px) {
+  main.container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

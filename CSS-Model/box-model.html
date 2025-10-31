@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Exploration</title>
+  <link rel="stylesheet" href="box-model.css">
+</head>
+<body>
+
+  <header>
+    <h1>Box Model Exploration</h1>
+    <p>Understanding content, padding, border, and margin visually.</p>
+  </header>
+
+  <main class="container">
+    <!-- Default Box Model -->
+    <section class="box-section">
+      <h2>Default Box Model (content-box)</h2>
+      <div class="box content-box">
+        <p>Content Area</p>
+      </div>
+      <p class="desc">
+        In the <strong>default model</strong>, the total width and height are calculated 
+        by adding <em>content + padding + border + margin</em>.  
+        This can make precise sizing harder to manage.
+      </p>
+    </section>
+
+    <!-- Border-box Model -->
+    <section class="box-section">
+      <h2>Border-box Model (box-sizing: border-box)</h2>
+      <div class="box border-box">
+        <p>Content Area</p>
+      </div>
+      <p class="desc">
+        In <strong>border-box</strong>, padding and border are included within the element’s 
+        total width and height — making layouts more predictable.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Akrati Gupta | Box Model Practice</p>
+  </footer>
+
+</body>
+</html>

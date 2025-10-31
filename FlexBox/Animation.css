@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Loader container */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Circles */
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #00bfff;
+  border-radius: 50%;
+  animation: bounce 0.8s infinite ease-in-out;
+}
+
+/* Delay each circle */
+.circle:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.circle:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Animation keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

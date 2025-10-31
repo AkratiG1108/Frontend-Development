@@ -1,0 +1,119 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #0a0f24;
+  color: #fff;
+  padding: 2em 0;
+}
+
+/* Pricing Container */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2em;
+  padding: 4em 5%;
+  flex-wrap: wrap;
+}
+
+/* Individual Plan */
+.plan {
+  background-color: #fff;
+  width: 30%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  background-color: #ffcb05;
+}
+
+/* Plan Heading */
+.plan h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+  color: #0a0f24;
+}
+
+/* Price */
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #2a2f64;
+}
+
+.price span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Features List */
+.plan ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 1em;
+  line-height: 1.8em;
+}
+
+.plan ul li::before {
+  content: "✔ ";
+  color: #2a2f64;
+  font-weight: bold;
+}
+
+/* Button */
+.plan a {
+  display: inline-block;
+  margin-top: 1.5em;
+  background-color: #0a0f24;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7em 1.5em;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.plan a:hover {
+  background-color: #2a2f64;
+}
+
+/* Highlight Popular Plan */
+.popular {
+  border: 3px solid #2a2f64;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #0a0f24;
+  color: white;
+  padding: 1.5em 0;
+  margin-top: 3em;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .plan {
+    width: 90%;
+  }
+}

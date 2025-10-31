@@ -1,0 +1,108 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+}
+
+/* Header */
+header {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffcb05;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Sections */
+.section {
+  min-height: 80vh;
+  padding: 5vh 10%;
+  text-align: center;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+/* Section 1 - Linear Gradient Background */
+.about {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+/* Section 2 - Radial Gradient + Parallax */
+.culture {
+  background: radial-gradient(circle at center, #ffcb05, #f25f5c);
+  color: #fff;
+  background-attachment: fixed;
+}
+
+/* Section 3 - Image with Fixed Background */
+.places {
+  background: url('delhi.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+.places ul {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2em;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1.5em;
+}
+
+footer a {
+  color: #ffcb05;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .section {
+    padding: 10vh 5%;
+  }
+}

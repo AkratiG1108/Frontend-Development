@@ -1,0 +1,105 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Page Layout */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+main section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------- */
+/* 1. Element Selector */
+/* ------------------- */
+p {
+  color: #444;
+  margin: 10px 0;
+}
+
+/* ------------------- */
+/* 2. Class Selector   */
+/* ------------------- */
+.highlight {
+  background-color: #fffae6;
+  border-left: 5px solid #f4b400;
+  padding: 10px;
+}
+
+/* ------------------- */
+/* 3. ID Selector      */
+/* ------------------- */
+#unique {
+  background-color: #e0f7fa;
+  border-left: 5px solid #00acc1;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* ------------------- */
+/* 4. Attribute Selector */
+/* ------------------- */
+a[target="_blank"] {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+a[title] {
+  color: #d32f2f;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ------------------- */
+/* 5. Combinator Selectors */
+/* ------------------- */
+
+/* Descendant selector */
+.combinator-demo p {
+  color: #555;
+}
+
+/* Child selector */
+.combinator-demo > .child {
+  background-color: #e8f5e9;
+  border-left: 5px solid #43a047;
+  padding: 10px;
+}
+
+/* Adjacent sibling selector */
+.combinator-demo h3 + p {
+  background-color: #fff3e0;
+  border-left: 5px solid #fb8c00;
+  padding: 10px;
+}
+
+/* General sibling selector */
+.combinator-demo h3 ~ p {
+  color: #7b1fa2;
+  font-style: italic;
+}

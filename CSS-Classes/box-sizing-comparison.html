@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="box-sizing-comparison.css">
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+    <p>Understanding the difference between <code>content-box</code> (default) and <code>border-box</code>.</p>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Default box-sizing -->
+      <div class="box content-box">
+        <h2>Default: content-box</h2>
+        <p>
+          In <code>content-box</code>, the width and height apply only to the content.
+          Padding and border add extra space, increasing the total box size.
+        </p>
+      </div>
+
+      <!-- Border-box -->
+      <div class="box border-box">
+        <h2>With box-sizing: border-box</h2>
+        <p>
+          In <code>border-box</code>, the width and height include padding and border.
+          The total box size stays consistent and easier to control.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 CSS Box Model Demo | Created for Practice</p>
+  </footer>
+</body>
+</html>

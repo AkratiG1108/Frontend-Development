@@ -1,0 +1,135 @@
+/* ===========================
+   General Styles
+=========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f6ff;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   Layout using Flexbox
+=========================== */
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.example {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 260px;
+  text-align: center;
+}
+
+/* ===========================
+   :hover Example
+=========================== */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0b61d8;
+  background: #e9f3ff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: #0b61d8;
+  color: white;
+}
+
+/* ===========================
+   :focus Example
+=========================== */
+input {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #0b61d8;
+  box-shadow: 0 0 5px rgba(11, 97, 216, 0.4);
+}
+
+/* ===========================
+   :active Example
+=========================== */
+button {
+  background: #0b61d8;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:active {
+  background: #094eab;
+  transform: scale(0.97);
+}
+
+/* ===========================
+   :nth-child() Example
+=========================== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  padding: 6px;
+  border: 1px solid #ccc;
+  margin: 3px 0;
+  border-radius: 4px;
+}
+
+/* Style even items differently */
+li:nth-child(even) {
+  background-color: #eef4ff;
+}
+
+/* Highlight the 3rd item */
+li:nth-child(3) {
+  background-color: #ffe08a;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  .examples {
+    flex-direction: column;
+    align-items: center;
+  }
+}

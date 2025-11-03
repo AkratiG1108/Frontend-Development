@@ -1,0 +1,109 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f1f3f6, #ffffff);
+  color: #333;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Header styling */
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Flex container for buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Base button styling */
+.btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1);
+}
+
+/* Button variants */
+.btn-primary {
+  background-color: #4dabf7;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #51cf66;
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #555;
+  color: #333;
+}
+
+/* Hover effect: scale + color change + shadow */
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Active effect: slight shrink */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Focus effect: outline glow */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px rgba(77, 171, 247, 0.5);
+}
+
+/* Specific hover color changes */
+.btn-primary:hover {
+  background-color: #339af0;
+}
+
+.btn-secondary:hover {
+  background-color: #37b24d;
+}
+
+.btn-outline:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

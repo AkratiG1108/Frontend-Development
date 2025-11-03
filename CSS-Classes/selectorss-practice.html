@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Practice</title>
+  <link rel="stylesheet" href="selectors-practice.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+    <p>Learn how different CSS selectors style HTML elements.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Element Selector</h2>
+      <p>This paragraph is styled using the <strong>element selector</strong> (targets all &lt;p&gt; tags).</p>
+      <p>Another example paragraph to show how element selectors apply globally.</p>
+    </section>
+
+    <section>
+      <h2>2. Class Selector</h2>
+      <p class="highlight">This text is styled using a <strong>class selector</strong>.</p>
+      <p class="highlight">Multiple elements can share the same class.</p>
+    </section>
+
+    <section>
+      <h2>3. ID Selector</h2>
+      <p id="unique">This line is styled using an <strong>ID selector</strong>, which targets a unique element.</p>
+    </section>
+
+    <section>
+      <h2>4. Attribute Selector</h2>
+      <a href="https://example.com" target="_blank">Visit Example.com</a>
+      <a href="#" title="Internal link">Internal Link</a>
+      <p>Hover over the links to see styles applied using <strong>attribute selectors</strong>.</p>
+    </section>
+
+    <section>
+      <h2>5. Combinators</h2>
+      <div class="combinator-demo">
+        <h3>Descendant Selector (div p)</h3>
+        <p>This paragraph is inside a div — styled using a <strong>descendant selector</strong>.</p>
+
+        <h3>Child Selector (div > p)</h3>
+        <p class="child">This paragraph is a direct child of a div.</p>
+
+        <h3>Adjacent Sibling Selector (h3 + p)</h3>
+        <p>This paragraph appears immediately after an h3 tag.</p>
+
+        <h3>General Sibling Selector (h3 ~ p)</h3>
+        <p>This paragraph follows an h3 somewhere later — styled by a <strong>~</strong> selector.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 CSS Selectors Demonstration | Created for Practice</p>
+  </footer>
+</body>
+</html>

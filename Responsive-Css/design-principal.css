@@ -1,0 +1,126 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY STYLING */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 30px 10px;
+}
+
+header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #ccc;
+}
+
+/* GRID LAYOUT */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* INDIVIDUAL BOXES */
+.principle-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: left;
+    transition: background 0.4s ease, color 0.4s ease, transform 0.3s ease;
+}
+
+.principle-box:hover {
+    background: linear-gradient(135deg, #00bcd4, #4dd0e1);
+    color: white;
+    transform: translateY(-8px);
+}
+
+/* HEADINGS & PARAGRAPHS */
+.principle-box h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.principle-box p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* CODE STYLING */
+pre {
+    background-color: #f0f4f8;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+pre code {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+}
+
+/* Change text color on hover (to remain readable) */
+.principle-box:hover pre {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.principle-box:hover code {
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* RESPONSIVE: STACK INTO ONE COLUMN BELOW 600PX */
+@media (max-width: 600px) {
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .principle-box {
+        padding: 20px;
+    }
+
+    .principle-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .principle-box p {
+        font-size: 0.95rem;
+    }
+}

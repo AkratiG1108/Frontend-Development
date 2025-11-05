@@ -1,0 +1,114 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f9fafc;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* MAIN SECTION */
+.comparison-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* IMAGE BOX */
+.image-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 1 1 45%;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-box:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGES */
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.5s ease;
+}
+
+/* APPLY FILTER ON SECOND IMAGE */
+.filtered img {
+    filter: brightness(60%);
+}
+
+/* REMOVE FILTER ON HOVER */
+.filtered:hover img {
+    filter: none;
+}
+
+/* CAPTION */
+figcaption {
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* RESPONSIVE DESIGN: STACK IMAGES BELOW 700PX */
+@media (max-width: 700px) {
+    .comparison-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .image-box {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    figcaption {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+}

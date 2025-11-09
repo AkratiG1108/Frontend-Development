@@ -1,0 +1,19 @@
+/* Custom Styling for Landing Page */
+
+/* Hero Section */
+.hero-section {
+  min-height: 80vh;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding: 60px 0;
+}
+
+/* Navbar brand hover effect */
+.navbar-brand:hover {
+  color: #ffc107 !important;
+  transition: color 0.3s ease;
+}
+
+/* Footer Styling */
+footer {
+  font-size: 0.9rem;
+}

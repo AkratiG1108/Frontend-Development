@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu - Today's Specials</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="restaurant.css">
+</head>
+<body class="bg-light text-dark">
+
+  <!-- Header Section -->
+  <header class="bg-danger text-white text-center py-4">
+    <h1 class="fw-bold">The Gourmet Garden</h1>
+    <p class="lead mb-0">Fresh Flavors • Handcrafted Dishes • Served with Love</p>
+  </header>
+
+  <!-- Today's Menu Section -->
+  <main class="container my-5">
+
+    <!-- Section Title -->
+    <h2 class="text-center fw-bold mb-4">🍽️ Today's Menu</h2>
+
+    <!-- Bootstrap Table -->
+    <div class="table-responsive mb-5">
+      <table class="table table-striped table-bordered text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Dish Name</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starters</td>
+            <td>Tomato Basil Soup</td>
+            <td>₹120</td>
+          </tr>
+          <tr>
+            <td>Main Course</td>
+            <td>Paneer Butter Masala with Naan</td>
+            <td>₹280</td>
+          </tr>
+          <tr>
+            <td>Main Course</td>
+            <td>Grilled Chicken Steak</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Desserts</td>
+            <td>Chocolate Lava Cake</td>
+            <td>₹160</td>
+          </tr>
+          <tr>
+            <td>Beverages</td>
+            <td>Fresh Lime Soda</td>
+            <td>₹90</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Chef's Specials -->
+    <section class="text-center mb-5">
+      <h3 class="fw-bold mb-3">👨‍🍳 Chef’s Specials</h3>
+      <ul class="list-group mx-auto" style="max-width: 400px;">
+        <li class="list-group-item list-group-item-warning fw-semibold">Truffle Mushroom Risotto</li>
+        <li class="list-group-item list-group-item-warning fw-semibold">Lemon Herb Grilled Salmon</li>
+        <li class="list-group-item list-group-item-warning fw-semibold">Creamy Alfredo Pasta</li>
+      </ul>
+    </section>
+
+    <!-- Featured Dish -->
+    <section class="text-center">
+      <h3 class="fw-bold mb-3">🥗 Featured Dish</h3>
+      <img src="https://images.unsplash.com/photo-1600891963933-960b8e554bb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+           alt="Featured Dish" class="img-fluid rounded shadow-sm mb-3" style="max-height:400px; object-fit:cover;">
+      <p class="lead">Our Signature “Paneer Butter Masala” — rich, creamy, and packed with authentic Indian flavors!</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2025 The Gourmet Garden | Crafted with Love ❤️</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

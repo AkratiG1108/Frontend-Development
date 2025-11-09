@@ -1,0 +1,21 @@
+/* Hover animation for pricing cards */
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Adjust button hover */
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Make the layout look modern */
+ul {
+  line-height: 1.8;
+}

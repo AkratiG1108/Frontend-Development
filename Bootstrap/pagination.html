@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Pagination & Pager</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="pagination.css">
+</head>
+<body class="bg-light">
+
+  <!-- Header -->
+  <header class="bg-dark text-white text-center py-4 mb-4">
+    <h1 class="fw-bold">My Travel Blog</h1>
+    <p class="lead mb-0">Exploring the world — one post at a time 🌍</p>
+  </header>
+
+  <!-- Blog Post Previews -->
+  <main class="container mb-5">
+    <div class="row g-4">
+
+      <!-- Blog Post 1 -->
+      <div class="col-12">
+        <div class="card shadow-sm border-0">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Beach">
+          <div class="card-body">
+            <h3 class="card-title text-primary fw-bold">A Weekend in the Maldives</h3>
+            <p class="card-text text-muted">
+              Crystal blue waters, coconut palms, and endless relaxation — here’s my guide to the perfect island escape.
+            </p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="col-12">
+        <div class="card shadow-sm border-0">
+          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Mountains">
+          <div class="card-body">
+            <h3 class="card-title text-primary fw-bold">Hiking through the Swiss Alps</h3>
+            <p class="card-text text-muted">
+              The sound of cowbells, the chill mountain breeze, and the stunning views — discover why Switzerland is every hiker’s paradise.
+            </p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Blog pagination" class="mt-5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Pager -->
+    <div class="d-flex justify-content-between align-items-center mt-4">
+      <a href="#" class="btn btn-outline-secondary">&laquo; Older Posts</a>
+      <a href="#" class="btn btn-outline-secondary">Newer Posts &raquo;</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-dark text-white">
+    <p class="mb-0">© 2025 My Travel Blog | All Rights Reserved</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

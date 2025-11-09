@@ -1,0 +1,27 @@
+/* Add a soft hover to cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for pagination links */
+.page-link {
+  color: var(--bs-primary);
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+/* Pager button hover */
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}

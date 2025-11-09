@@ -1,0 +1,47 @@
+/* ================================
+   Custom Bootstrap Theme Variables
+================================= */
+:root {
+  --bs-primary: #ff7b54;               /* Warm coral theme color */
+  --bs-font-sans-serif: 'Poppins', sans-serif; /* Custom Google font */
+  --bs-body-color: #333;
+  --bs-body-bg: #fffaf6;
+}
+
+/* ================================
+   Custom Styling
+================================= */
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Header styling */
+header {
+  background-color: var(--bs-primary);
+}
+
+/* Blog Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #ff6333;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+}

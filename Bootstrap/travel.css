@@ -1,0 +1,22 @@
+/* Carousel Image Styling */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Smooth hover and rounded effect for carousel */
+.carousel {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Progress bar styling */
+.progress {
+  height: 25px;
+  border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+  font-size: 0.95rem;
+}

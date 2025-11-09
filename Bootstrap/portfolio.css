@@ -1,0 +1,13 @@
+/* Custom styling for portfolio layout */
+
+/* Profile Image Hover */
+img.rounded-circle:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Section Shadow */
+section {
+  max-width: 500px;
+  margin: auto;
+}

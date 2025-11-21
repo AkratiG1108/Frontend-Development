@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q7 – Login Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            padding: 6px;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        /* Validation styles */
+        .invalid {
+            border: 2px solid red;
+        }
+        .valid {
+            border: 2px solid green;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<div class="field">
+    <label>Username</label>
+    <input type="text" id="username" placeholder="Enter Username">
+    <span id="userError" class="error"></span>
+</div>
+
+<div class="field">
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Enter Password">
+    <span id="passError" class="error"></span>
+</div>
+
+<button onclick="validateLogin()">Login</button>
+
+<script>
+// Q7 – Login Form Validation using RegExp
+// --------------------------------------
+// Username: ≥ 5 chars
+// Password: ≥ 8 chars with uppercase, lowercase, digit, special char
+
+function validateLogin() {
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+    const userError = document.getElementById("userError");
+    const passError = document.getElementById("passError");
+
+    // RegExp Rules
+    const usernameRegex = /^.{5,}$/; 
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+    let isValid = true;
+
+    // Username Validation
+    if (!usernameRegex.test(username.value)) {
+        username.classList.add("invalid");
+        username.classList.remove("valid");
+        userError.textContent = "Username must be at least 5 characters long.";
+        isValid = false;
+    } else {
+        username.classList.remove("invalid");
+        username.classList.add("valid");
+        userError.textContent = "";
+    }
+
+    // Password Validation
+    if (!passwordRegex.test(password.value)) {
+        password.classList.add("invalid");
+        password.classList.remove("valid");
+        passError.textContent =
+            "Password must be 8+ characters, contain uppercase, lowercase, number & special char.";
+        isValid = false;
+    } else {
+        password.classList.remove("invalid");
+        password.classList.add("valid");
+        passError.textContent = "";
+    }
+
+    if (isValid) {
+        alert("Login Successful!");
+    }
+}
+</script>
+
+</body>
+</html>

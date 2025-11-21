@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q4 – Custom Form Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .field {
+            margin-bottom: 12px;
+        }
+        label {
+            display: block;
+            margin-bottom: 4px;
+        }
+        input {
+            padding: 6px;
+            width: 250px;
+        }
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            font-family: Consolas, monospace;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Custom Form Builder</h2>
+<div id="formContainer"></div>
+
+<h3>Form Data (on Submit)</h3>
+<div id="output"></div>
+
+<script>
+// Q4 – Custom Form Builder (Forms + Classes)
+// ------------------------------------------
+// FormBuilder class that takes an array of field objects
+// and builds a form dynamically using innerHTML.
+
+// Field example: { type: 'text', label: 'Username', name: 'username' }
+
+class FormBuilder {
+    constructor(containerId, fields) {
+        this.container = document.getElementById(containerId);
+        this.fields = fields;
+    }
+
+    // Builds the form HTML and attaches submit handler
+    renderForm() {
+        let formHtml = `<form id="dynamicForm">`;
+
+        this.fields.forEach(field => {
+            // if name is not given, generate from label
+            const name =
+                field.name ||
+                field.label.toLowerCase().replace(/\s+/g, "_");
+
+            formHtml += `
+                <div class="field">
+                    <label for="${name}">${field.label}</label>
+                    <input
+                        type="${field.type}"
+                        id="${name}"
+                        name="${name}"
+                        placeholder="${field.placeholder || ""}"
+                    >
+                </div>
+            `;
+        });
+
+        // Add submit button
+        formHtml += `
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+        `;
+
+        // Inject into container using innerHTML
+        this.container.innerHTML = formHtml;
+
+        // Attach click event for Submit button
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener("click", () => {
+            const data = this.getFormData();
+            // Show in console and on page
+            console.log("Form Data:", data);
+            document.getElementById("output").textContent =
+                JSON.stringify(data, null, 2);
+        });
+    }
+
+    // Returns all entered values as an object
+    getFormData() {
+        const result = {};
+        const form = document.getElementById("dynamicForm");
+
+        this.fields.forEach(field => {
+            const name =
+                field.name ||
+                field.label.toLowerCase().replace(/\s+/g, "_");
+
+            const input = form.querySelector(`[name="${name}"]`);
+            result[name] = input ? input.value : null;
+        });
+
+        return result;
+    }
+}
+
+// ------- Usage Example -------
+
+// Define fields for the form
+const fields = [
+    { type: "text", label: "Username", name: "username" },
+    { type: "email", label: "Email", name: "email" },
+    { type: "password", label: "Password", name: "password" },
+    { type: "number", label: "Age", name: "age" }
+];
+
+// Create FormBuilder object and render form
+const formBuilder = new FormBuilder("formContainer", fields);
+formBuilder.renderForm();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Character Counter</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 120px;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        #counter {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .normal { color: black; }
+        .warning { color: orange; }
+        .danger { color: red; }
+    </style>
+</head>
+<body>
+
+<h2>Live Character Counter</h2>
+
+<textarea id="textBox" placeholder="Start typing..."></textarea>
+<div id="counter" class="normal">100 characters left</div>
+
+<button id="resetBtn">Reset</button>
+
+<script>
+// --------------------------------------------------
+// Live Character Counter with Warning Behavior
+// Max: 100 characters
+// Warning colors + prevent typing at limit
+// --------------------------------------------------
+
+const textBox = document.getElementById("textBox");
+const counter = document.getElementById("counter");
+const resetBtn = document.getElementById("resetBtn");
+
+const MAX_CHAR = 100;
+
+// Update counter every time user types
+textBox.addEventListener("keydown", function (event) {
+    const currentLength = textBox.value.length;
+
+    // If limit reached → block further typing
+    if (currentLength >= MAX_CHAR && event.key !== "Backspace" && event.key !== "Delete") {
+        event.preventDefault();
+        return;
+    }
+});
+
+// Update counter on input (after text changes)
+textBox.addEventListener("input", updateCounter);
+
+function updateCounter() {
+    const remaining = MAX_CHAR - textBox.value.length;
+
+    counter.textContent = `${remaining} characters left`;
+
+    // Color changes
+    if (remaining <= 0) {
+        counter.className = "danger";
+    } else if (remaining <= 20) {
+        counter.className = "warning";
+    } else {
+        counter.className = "normal";
+    }
+}
+
+// Reset button clears textarea and counter
+resetBtn.addEventListener("click", () => {
+    textBox.value = "";
+    counter.textContent = "100 characters left";
+    counter.className = "normal";
+});
+</script>
+
+</body>
+</html>

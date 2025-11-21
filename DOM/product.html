@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Product List Manager</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #productInput { padding: 8px; width: 250px; }
+    button { margin-left: 5px; }
+    li { padding: 6px 0; }
+    .editing { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+
+  <h2>Product List Manager</h2>
+
+  <!-- Add product input -->
+  <input id="productInput" type="text" placeholder="Enter product name">
+  <button onclick="addProduct()">Add Product</button>
+
+  <!-- List -->
+  <ul id="productList"></ul>
+
+<script>
+// --------------------------------------------------
+// Dynamic Product Manager (Single File)
+// Add, Edit, Delete using Event Delegation
+// Inline editing + auto-save on outside click
+// --------------------------------------------------
+
+// DOM references
+const productInput = document.getElementById("productInput");
+const productList = document.getElementById("productList");
+
+// Add new product
+function addProduct() {
+    const productName = productInput.value.trim();
+    if (!productName) return;
+
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+        <span class="product-name">${productName}</span>
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+    `;
+
+    productList.appendChild(li);
+    productInput.value = "";
+}
+
+/* ---------------------------------------------
+   EVENT DELEGATION (Edit + Delete)
+----------------------------------------------*/
+productList.addEventListener("click", function (event) {
+    const target = event.target;
+
+    // DELETE
+    if (target.classList.contains("delete-btn")) {
+        target.parentElement.remove();
+    }
+
+    // EDIT
+    if (target.classList.contains("edit-btn")) {
+        enableEditing(target.parentElement);
+    }
+});
+
+/* ---------------------------------------------
+   Enable Inline Editing
+----------------------------------------------*/
+function enableEditing(li) {
+    const span = li.querySelector(".product-name");
+
+    if (li.classList.contains("editing")) return;
+
+    li.classList.add("editing");
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = span.textContent;
+    input.style.width = "200px";
+
+    li.replaceChild(input, span);
+    input.focus();
+
+    // Save on Enter
+    input.addEventListener("keydown", e => {
+        if (e.key === "Enter") saveEdit(li, input);
+    });
+
+    // Auto-save on click outside
+    document.addEventListener(
+        "click",
+        function handleClickOutside(e) {
+            if (!li.contains(e.target)) {
+                saveEdit(li, input);
+                document.removeEventListener("click", handleClickOutside);
+            }
+        }
+    );
+}
+
+/* ---------------------------------------------
+   Save Edited Product
+----------------------------------------------*/
+function saveEdit(li, input) {
+    const newName = input.value.trim() || "Unnamed Product";
+
+    const newSpan = document.createElement("span");
+    newSpan.className = "product-name";
+    newSpan.textContent = newName;
+
+    li.replaceChild(newSpan, input);
+    li.classList.remove("editing");
+}
+</script>
+
+</body>
+</html>
